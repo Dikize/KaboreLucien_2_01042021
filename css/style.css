@@ -86,12 +86,12 @@ header h3:nth-child(1) {
     line-height: 30px;    
 }
 header a p{
-    color: rgb(208, 201, 201);
+    color: black;
 }
 
 /*--************************* ( form recherche) *************************--*/
 .flexForm {
-    width: 500px;
+    width: 393px;
     height: 38px;
     margin: 17px 0;
     display: flex;
@@ -147,28 +147,19 @@ input[type="search"] {
     background: #8a63dd;
     border: 1px solid #8a63dd;
 }
-@media (max-width: 1024px) {
-    
-}
+/* @media (max-width: 1024px) {
+
+} */
 @media (max-width: 540px) {
-    header {
-        padding: 0 30px;
+    .flexForm {
+        width: 100%;
+        height: 51px;
     }
-    .filtre {
-        display: grid;
-        grid-template-columns: 50% 50%;
+    input[type="search"] {
+        flex-basis: 70%;
     }
-    .filtre button:nth-child(2) {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .filtre button:nth-child(3) {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    .filtre button:nth-child(3) {
-        grid-column: 1/2;
-        grid-row: 4/5;
+    .flexForm button {
+        width: 62px;
     }
 }
 /*--************************* ( filtres ) *************************--*/
@@ -221,9 +212,42 @@ input[type="search"] {
         flex-basis: 25%;
     }  
 }
-/* @media (max-width: 540px) {
- 
-} */
+@media (max-width: 762px) {
+    .filtre {
+            display: grid;
+            grid-template-columns: 30% 30%;
+            grid-template-rows: 50px 50px 50px;
+        }
+    .filtre button:nth-child(2) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .filtre button:nth-child(3) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .filtre button:nth-child(4) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .filtre button:nth-child(5) {
+        grid-column: 2/3;
+        grid-row: 4/3;
+    }
+}
+@media (max-width: 540px) {
+    header {
+        padding: 0 30px;
+    }
+    .filtre {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50px 50px 50px 50px;
+    }
+    .filtre button:nth-child(5) {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
 /*--************************* (main hébergement) *************************--*/
 main{   
     margin: 20px 0;
