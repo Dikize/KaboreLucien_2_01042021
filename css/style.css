@@ -40,8 +40,7 @@ body {
 }
 /*--************************* ( navbar) *************************--*/
 nav {
-    position: fixed;
-    height: 70px;
+    /* position: fixed; */
     width: 100%;
     border-bottom: 1px solid transparent;
     z-index: 100;
@@ -49,7 +48,6 @@ nav {
 }
 
 .logo-menu {
-	z-index: 250;
 	align-self: flex-end;
     margin-right: auto;
 }
@@ -85,7 +83,12 @@ header {
 header h3:nth-child(1) {
     line-height: 30px;    
 }
+header a {
+    display: flex;
+    margin-top: 25px;
+}
 header a p{
+    margin-left: 10px;
     color: black;
 }
 
@@ -147,6 +150,9 @@ input[type="search"] {
     background: #8a63dd;
     border: 1px solid #8a63dd;
 }
+.fa-search{
+    display: none;
+}
 /* @media (max-width: 1024px) {
 
 } */
@@ -188,7 +194,17 @@ input[type="search"] {
         flex-basis: 70%;
     }
     .flexForm button {
-        width: 62px;
+        width: 19%;
+        border-radius: 18px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexForm button p {
+        display: none;
+    }
+    .fa-search{
+        display: block;
     }
 }
 /*--************************* ( filtres ) *************************--*/
