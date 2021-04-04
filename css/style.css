@@ -705,6 +705,12 @@ section .card p {
         border-radius: 30px;
         align-self: center;
     }
+    section .card:nth-child(3),
+    section .card:nth-child(4),
+    section .card:nth-child(5),
+    section .card:nth-child(6) {
+        margin: 15px 0;
+    }
 }
 /*--************************* (Footer) *************************--*/
 footer {
