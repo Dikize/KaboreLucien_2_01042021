@@ -340,7 +340,7 @@ input[type="search"] {
     }
     .filtre button:nth-child(5) .img {
         width: 20%;
-        height: 100%;
+        height: 40px;
     }
     .filtre button h3 {
         margin: auto;
