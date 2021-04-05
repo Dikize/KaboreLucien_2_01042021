@@ -279,7 +279,7 @@ input[type="search"] {
     align-items: center;
 }
 .filtre img {
-    height: 16px;
+    height: 100%;
     margin: 7px;
 }
 @media (max-width: 1024px) {
