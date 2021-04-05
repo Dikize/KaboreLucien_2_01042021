@@ -36,6 +36,7 @@ body {
     }
     .container .card {
         width: 100%;
+        cursor: pointer;
     }
 }
 /*--************************* ( navbar) *************************--*/
@@ -166,7 +167,7 @@ input[type="search"] {
     
     .liste-nav {
         height: 95px;
-        padding: 0 25px;
+        padding: 0 15px;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 47.5px 47.5px;
@@ -314,7 +315,7 @@ input[type="search"] {
 }
 @media (max-width: 540px) {
     header {
-        padding: 0 30px;
+        padding: 0 15px;
     }
     .filtre {
         grid-template-columns: 50% 50%;
@@ -368,8 +369,10 @@ article h2{
     grid-column: 1/5;
     justify-self: center; 
 }
-article h4 {
-    margin: 10px 5px 5px;
+main h4{
+    margin: 10px 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 article .card:nth-child(2){
     grid-row: 2/3;
@@ -418,8 +421,8 @@ article .card img{
     height: 100px;
     border-radius: 10px;
 }
-.etoile{
-    margin-left: 5px;
+.etoile, .card p{
+    margin-left: 10px;
 }
 
 .etoile a:hover,
@@ -447,6 +450,12 @@ article .card img{
     }
     article .card, aside .card {
         height: 230.6px;
+        border-radius: 20px;
+    }
+    article .card img {
+        height: 140px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     article .card:nth-child(4) {
         grid-row: 3/4;
@@ -494,9 +503,14 @@ aside .card{
     justify-self: center;
     column-gap: 8px;
 }
-aside h2 {
-    align-self: flex-end;
-    justify-self: center;
+.titleAside {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.fa, .far, .fas {
+	font-size: 30px;
 }
 aside img{
     grid-row: 1/4;
@@ -543,9 +557,9 @@ aside .etoile{
     aside img{
         height: 148px;
     }
-    aside h4 {
+    /* aside h4 {
         margin: 10px 5px 5px;
-    }
+    } */
     aside .etoile{
         align-self: flex-start;
     }
@@ -585,11 +599,11 @@ aside .etoile{
         display: flex;
         flex-direction: column;
         height: 1685px;
-        padding: 0 30px;
+        padding: 0 15px;
     }
     aside {
         height: 760px;
-        padding: 0 30px;
+        padding: 0 15px;
         border-radius: 0;
         grid-template-rows: 64px 200px 200px 200px; 
     }
@@ -612,6 +626,9 @@ aside .etoile{
         border-radius: 0;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
+    }
+    aside .etoile {
+        align-self: flex-end;
     }
 }
 /*--************************* ( section activité ) *************************--*/
@@ -673,7 +690,8 @@ section h3 {
     grid-column: 1/3;
 }
 section .card p {
-    margin: auto 15px;
+	margin: auto 30px;
+	font-weight: bold;
 }
 
 
@@ -721,7 +739,7 @@ section .card p {
     section {
         display: flex;
         flex-direction: column;
-        padding: 0 30px;
+        padding: 0 15px;
     }
     section .card:nth-child(2),
     section .card:nth-child(3),
@@ -738,6 +756,11 @@ section .card p {
     section .card:nth-child(5),
     section .card:nth-child(6) {
         margin: 25px 0;
+    }
+    section .card img {
+        height: 80%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
 }
 /*--************************* (Footer) *************************--*/
@@ -779,7 +802,7 @@ footer h3{
         footer {
         display: flex;
         flex-direction: column;
-        padding: 30px 30px;
+        padding: 30px 15px;
         align-items: flex-start;
     }
     .propos, .hebergement, .assistance {

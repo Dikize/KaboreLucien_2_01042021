@@ -21,8 +21,8 @@
                 <a href="#" class="logo-menu">
                     <img src="images/logo/Reservia.svg" alt="logo menu">
                 </a>
-                <li><a class="item-nav" href="#">Hébergements</a></li>
-                <li><a class="item-nav" href="#">Activités</a></li>
+                <li><a class="item-nav" href="#hebergement">Hébergements</a></li>
+                <li><a class="item-nav" href="#activite">Activités</a></li>
                 <li><a class="item-nav" href="#">S'inscrire</a></li>
             </ul>
         </nav>
@@ -87,7 +87,7 @@
 
         <!--*************************** ( Hebergement & aside ) ***************************-->
         <main>
-            <article>
+            <article id="hebergement">
                 <h2>Hébergements à Marseille</h2>
                 
                 <!-- Carte -->
@@ -180,7 +180,10 @@
 
             <!-- aside les plus populaires -->
             <aside>
-                <h2>Les plus populaires</h2>
+                <div class="titleAside">
+                    <h2>Les plus populaires</h2>
+                    <i class="fas fa-chart-line"></i>
+                </div>
                 
                 <!-- Carte -->
                 <div class="card">
@@ -228,7 +231,7 @@
         </main>
 
         <!--*************************** ( activités ) ***************************-->
-        <section>
+        <section id="activite">
             <h3>Activités à Marseille</h3>
             
             <!-- Carte -->
