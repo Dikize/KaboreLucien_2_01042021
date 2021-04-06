@@ -360,19 +360,18 @@ article {
     grid-template-rows: 10% 40% 40% 8%;
     gap: 3px;
 }
-main h4 {
-    font-size: 0.9rem;
-    font-weight: bold;
-}
 article h2{
     margin: 30px 10px 0;
     grid-column: 1/5;
     justify-self: center; 
 }
-main h4{
-    margin: 10px 0 10px 10px;
-    font-size: 1.3rem;
+main figcaption {
+    margin: 10px 0 0 10px;
+    font-size: large;
     font-weight: bold;
+}
+main p {
+    font-size: medium;
 }
 article .card:nth-child(2){
     grid-row: 2/3;
@@ -398,8 +397,8 @@ article .card:nth-child(7) {
     grid-row: 3/4;
     grid-column: 3/4;
 }
-article p {
-    /* margin: 20px; */
+article p:nth-child(8) {
+    margin: 20px;
     grid-column: 1/5;
     grid-row: 4/5;
 }
@@ -424,7 +423,10 @@ article .card img{
 .etoile, .card p{
     margin-left: 10px;
 }
-
+.etoile {
+	display: flex;
+	margin-top: auto;
+}
 .etoile a:hover,
 .etoile a:focus {
     color: blue;
@@ -435,9 +437,6 @@ article .card img{
     text-decoration: none;
     font-size: 1em;
     transition: color .4s;
-}
-.etoile p{
-    margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -456,8 +455,7 @@ article .card img{
         width: 90%;
     }
     article h4 {
-        margin: 5px 10px;
-        font-size: 1.3rem;
+        margin: 5px 0 5px 10px;
         font-weight: bold;
     }
     .etoile {
@@ -531,9 +529,8 @@ aside img{
     height: 100%;
     border-radius: 10px;
 }
-aside h4 {
+aside figcaption {
     grid-column: 2/3;
-    font-size: 1rem;
 }
 
 aside .card:nth-child(2) {
@@ -672,12 +669,6 @@ section .card{
     display: flex;
     flex-direction: column;
 }
-section .card img{
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
 
 section .card:nth-child(2) {
     grid-row: 2/4;
@@ -708,12 +699,68 @@ section .card:nth-child(7) {
     grid-column: 4/5;
 }
 
+section .card:nth-child(2) .img{
+    background-color: #333;
+    background-image: url('../images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
+}
+section .card:nth-child(3) .img{
+    background-color: #333;
+    background-image: url('../images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
+}
+section .card:nth-child(4) .img{
+    background-color: #333;
+    background-image: url('../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
+}
+section .card:nth-child(5) .img{
+    background-color: #333;
+    background-image: url('../images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
+}
+section .card:nth-child(6) .img{
+    background-color: #333;
+    background-image: url('../images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
+}
+section .card:nth-child(7) .img{
+    background-color: #333;
+    background-image: url('../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
+}
+section .card .img{
+    width: 100%;
+    height: 80%;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+section .card-100 .img{
+    width: 100%;
+    height: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 /*--------- text ---------*/
 section h3 {
     margin-bottom: 13px;
     grid-column: 1/3;
 }
-section .card p {
+section .card figcaption {
 	margin: auto 0 auto 30px;
 	font-weight: bold;
 }
@@ -721,7 +768,7 @@ section .card p {
 
 @media (max-width: 1024px) {
     section {
-        margin: 35px 0 20px;
+        margin: 50px 0 20px;
         grid-template-rows: 28px 205px 205px 205px 205px;
         grid-template-columns: 49% 49%;
         column-gap: 2%;
@@ -752,10 +799,10 @@ section .card p {
         grid-column: 2/1;
         height: 100%;
     }
-    section .card img {
+    section .card .img {
         height: 82%;
     }
-    section .card-100 img {
+    section .card-100 .img {
         height: 90%;
     }
 }
@@ -781,7 +828,13 @@ section .card p {
     section .card:nth-child(6) {
         margin: 25px 0;
     }
-    section .card img {
+    section .card:nth-child(2){
+        margin-bottom: 25px;
+    }
+    section .card:nth-child(7){
+        margin-top: 25px;
+    }
+    section .card .img {
         height: 80%;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
