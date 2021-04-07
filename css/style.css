@@ -47,15 +47,6 @@ nav {
     z-index: 100;
     display: flex;
 }
-
-.logo-menu {
-	align-self: baseline;
-    margin-right: auto;
-}
-
-nav a {
-    display: flex;
-}
 .liste-nav {
     border-bottom: 1px dotted transparent;
     height: 70px;
@@ -67,7 +58,14 @@ nav a {
     /* position: fixed; */
     z-index: 200;
 }
+.logo-menu {
+	align-self: center;
+}
+.liste-nav li:nth-child(1) {
+    margin-right: auto;
+}
 .item-nav {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +74,16 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
 }
-nav li a:focus {
+.liste-nav li {
+	height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav .item-nav:focus {
+    border-top: 1px solid #0065FC;
+}
+nav .item-nav:focus {
     border-top: 1px solid #0065FC;
 }
 
@@ -178,6 +185,7 @@ input[type="search"] {
 
     .logo-menu {
         height: 47.5px;
+        margin: 0;
         grid-column: 1/2;
         grid-row: 1/2;
     }
@@ -197,9 +205,7 @@ input[type="search"] {
         grid-row: 1/2;
         justify-self: flex-end;
     }
-    .liste-nav li:nth-child(4) a{
-       margin: 0;
-    }
+    
     .item-nav {
         font-size: 1.5rem;
         align-items: center;
@@ -218,7 +224,7 @@ input[type="search"] {
     } */
     input[type="search"] {
         padding-right: 0;
-        flex-basis: 70%;
+        flex-basis: 88%;
     }
     .flexForm button {
         padding: 0px;
@@ -336,11 +342,11 @@ input[type="search"] {
     .filtre button:nth-child(3) .img, 
     .filtre button:nth-child(4) .img {
         width: 25%;
-        height: 100%;
+        height: 40px;
     }
     .filtre button:nth-child(5) .img {
         width: 20%;
-        height: 100%;
+        height: 40px;
     }
     .filtre button h3 {
         margin: auto;
@@ -610,8 +616,9 @@ aside .etoile{
         row-gap: 21px;
     }
     .titleAside {
-        grid-column: 2/3;
+        grid-column: 1/4;
         justify-content: center;
+        align-items: center;
     }
     .titleAside h2 {
         margin-right: 25px;
@@ -648,8 +655,6 @@ aside .etoile{
 }
 @media (max-width: 762px) {
     main {
-        display: flex;
-        flex-direction: column;
         gap: 10px;
     }
     article,
@@ -659,7 +664,8 @@ aside .etoile{
         margin: 0;
     }
     aside {
-        height: 893px;
+        height: 360px;
+        padding: 10px 0;
     }
 }
 @media (max-width: 540px) {
@@ -674,10 +680,12 @@ aside .etoile{
         padding: 0 15px;
     }
     aside {
-        height: 760px;
+        height: 730px;
         padding: 0 15px;
         border-radius: 0;
-        grid-template-rows: 64px 200px 200px 200px; 
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
     aside .card:nth-child(2),
     aside .card:nth-child(3),
