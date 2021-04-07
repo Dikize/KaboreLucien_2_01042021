@@ -683,9 +683,14 @@ aside .etoile{
         height: 730px;
         padding: 0 15px;
         border-radius: 0;
+<<<<<<< HEAD
         display: flex;
         flex-direction: column;
         gap: 30px;
+=======
+        display: grid;
+        grid-template-rows: 64px 200px 200px 200px; 
+>>>>>>> 78558505445a044044911580b3b0522d174711a2
     }
     aside .card:nth-child(2),
     aside .card:nth-child(3),
