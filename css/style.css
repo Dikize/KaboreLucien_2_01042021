@@ -226,13 +226,13 @@ input[type="search"] {
         height: 51px;
     }
     .flexForm > * {
-        padding: 0 0 0 30px;
+        padding: 0 0 0 45px;
     }
     input[type="search"] {
         position: relative;
-        right: 15px;
+        right: 30px;
         padding-right: 0;
-        flex-basis: 88%;
+        flex-basis: 95%;
     }
     .flexForm label {
         z-index: 100;
