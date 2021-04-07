@@ -134,7 +134,7 @@ input[type="search"] {
 .flexForm label {
     padding: 0;
     background-color: #F2F2F2;
-    flex-basis: 45px;
+    flex-basis: 80px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     display: flex;
@@ -163,7 +163,7 @@ input[type="search"] {
 .fa-search{
     display: none;
 }
-/* @media (max-width: 1024px) {
+/* @media (max-width: 834px) {
 
 } */
 @media (max-width: 540px) {
@@ -210,10 +210,18 @@ input[type="search"] {
         font-size: 1.5rem;
         align-items: center;
     }
+    nav .liste-nav li:nth-child(2) .item-nav{
+        padding-left: 15px;
+    }
     nav .liste-nav li:nth-child(2) .item-nav,
     nav .liste-nav li:nth-child(3) .item-nav {
         width: 100%;
         margin: 0;
+    }
+    nav .liste-nav li:nth-child(2) .item-nav:active ,
+    nav .liste-nav li:nth-child(2) .item-nav:active {
+        border-bottom: 1px solid #0065FC;
+        border-top: 0;
     }
     nav .liste-nav li:nth-child(2) .item-nav:focus ,
     nav .liste-nav li:nth-child(3) .item-nav:focus {
@@ -259,6 +267,7 @@ input[type="search"] {
 }
 /*--************************* ( filtres ) *************************--*/
 .filtre {
+    width: 100%;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -267,7 +276,7 @@ input[type="search"] {
     margin-right: 20px;
 }
 .filtre button {
-    height: 40px;
+    height: 50px;
     font-weight: bold;
     font-size: 0.9rem;
     flex-basis: 14%;
@@ -285,15 +294,17 @@ input[type="search"] {
 }
 .filtre button:nth-child(5) {
     flex-basis: 20%;
+    grid-template-columns: 20% 80%;
 }
 .filtre .img {
     background-color: #81a8e24d;
     height: 100%;
-    width: 100%;
+    width: 130%;
     border-radius: 100px;
     display: grid;
     justify-items: center;
     align-items: center;
+    clip-path: circle(45%);
 }
 .filtre img {
     height: 16px;
@@ -307,11 +318,11 @@ input[type="search"] {
         flex-basis: 25%;
     }  
 }
-@media (max-width: 762px) {
+@media (max-width: 834px) {
     .filtre {
         display: grid;
-        grid-template-columns: 30% 30%;
         grid-template-rows: 50px 50px 50px;
+        grid-gap: 10px;
     }
     .filtre button:nth-child(2) {
         grid-column: 1/2;
@@ -329,6 +340,7 @@ input[type="search"] {
         grid-column: 2/3;
         grid-row: 4/3;
     }
+    
 }
 @media (max-width: 540px) {
     header {
@@ -338,10 +350,13 @@ input[type="search"] {
         grid-template-columns: 50% 50%;
         grid-template-rows: 50px 50px 50px 50px;
     }
-    .filtre button:nth-child(2), 
+    /* .filtre button:nth-child(2), 
     .filtre button:nth-child(3), 
     .filtre button:nth-child(4) {
         display: flex;
+    } */
+    .filtre .img {
+        clip-path: circle(47%);
     }
     .filtre button:nth-child(5) {
         width: 115%;
@@ -352,12 +367,13 @@ input[type="search"] {
     .filtre button:nth-child(2) .img, 
     .filtre button:nth-child(3) .img, 
     .filtre button:nth-child(4) .img {
-        width: 25%;
-        height: 40px;
+        width: 120%;
+        height: 49px;
     }
     .filtre button:nth-child(5) .img {
         width: 20%;
-        height: 40px;
+        height: 59px;       
+        
     }
     .filtre button h3 {
         margin: auto;
@@ -553,7 +569,7 @@ aside .card{
     align-items: flex-end;
 }
 .fa, .far, .fas {
-	font-size: 16px;
+	font-size: 25px;
 }
 aside .card:nth-child(2) .img {
     background-color: #333;
