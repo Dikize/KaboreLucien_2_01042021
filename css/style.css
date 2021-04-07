@@ -229,8 +229,13 @@ input[type="search"] {
         padding: 0 0 0 30px;
     }
     input[type="search"] {
+        position: relative;
+        right: 15px;
         padding-right: 0;
         flex-basis: 88%;
+    }
+    .flexForm label {
+        z-index: 100;
     }
     .flexForm button {
         padding: 0px;
