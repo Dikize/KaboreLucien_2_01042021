@@ -31,7 +31,7 @@ body {
 }
 @media (max-width: 540px) {
     .container {
-	margin: 20px 0px 30px;
+	margin: 0 0 30px;
     }
     .container .card {
         width: 100%;
@@ -79,9 +79,6 @@ nav {
     align-items: flex-end;
 }
 
-nav .item-nav:focus {
-    border-top: 1px solid #0065FC;
-}
 nav .item-nav:focus {
     border-top: 1px solid #0065FC;
 }
@@ -175,31 +172,35 @@ input[type="search"] {
     }
     
     .liste-nav {
-        height: 95px;
-        padding: 0 15px;
+        height: 115px;
+        border-bottom: 1px solid #F2F2F2;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 47.5px 47.5px;
+        grid-template-rows: 70px 45px;
     }
 
     .logo-menu {
-        height: 47.5px;
-        margin: 0;
+        height: 70px;
         grid-column: 1/2;
         grid-row: 1/2;
     }
     .liste-nav li:nth-child(2) {
+        width: 100%;
         grid-column: 1/2;
         grid-row: 2/3;
         align-self: flex-end;
+        justify-self: center;
     }
     .liste-nav li:nth-child(3) {
+        width: 100%;
         grid-column: 2/3;
         grid-row: 2/3;
         align-self: flex-end;
+        justify-self: center;
         
     }
     .liste-nav li:nth-child(4) {
+        height: 70px;
         grid-column: 2/3;
         grid-row: 1/2;
         justify-self: flex-end;
@@ -209,7 +210,17 @@ input[type="search"] {
         font-size: 1.5rem;
         align-items: center;
     }
-
+    nav .liste-nav li:nth-child(2) .item-nav,
+    nav .liste-nav li:nth-child(3) .item-nav {
+        width: 100%;
+        margin: 0;
+    }
+    nav .liste-nav li:nth-child(2) .item-nav:focus ,
+    nav .liste-nav li:nth-child(3) .item-nav:focus {
+        border-bottom: 1px solid #0065FC;
+        border-top: 0;
+    }
+    
     .flexForm {
         width: 100%;
         height: 51px;
@@ -217,10 +228,6 @@ input[type="search"] {
     .flexForm > * {
         padding: 0 0 0 30px;
     }
-    /* .flexForm label {
-        position: relative;
-        left: 20px;
-    } */
     input[type="search"] {
         padding-right: 0;
         flex-basis: 88%;
@@ -680,25 +687,28 @@ aside .etoile{
     }
     aside {
         height: 730px;
-        padding: 0 15px;
+        padding: 25px 15px 0;
         border-radius: 0;
         display: flex;
         flex-direction: column;
         gap: 30px;
+    }
+    .titleAside {
+        justify-content: space-between;
     }
     aside .card:nth-child(2),
     aside .card:nth-child(3),
     aside .card:nth-child(4) {
         width: 100%;
         height: 190px;
-        border-radius: 30px;
+        margin: 25px 0;
         padding-bottom: 0px;
+        border-radius: 30px;
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 32.3% 32.3% 32.3%;
         align-self: center;
         justify-self: center;
-        column-gap: 0;
     }
 
     aside .img {
