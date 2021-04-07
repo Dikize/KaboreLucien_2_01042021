@@ -158,7 +158,7 @@ input[type="search"] {
 }
 .flexForm button:hover, .filtre button {
     background: #8a63dd;
-    border: 1px solid #8a63dd;
+    border: 1px solid #F2F2F2;
 }
 .fa-search{
     display: none;
@@ -633,6 +633,9 @@ aside .etoile{
     }
     .titleAside h2 {
         margin-right: 25px;
+    }
+    aside .card:nth-child(3) p {
+        margin-top: 10px;
     }
     aside .card {
         height: 100%;
