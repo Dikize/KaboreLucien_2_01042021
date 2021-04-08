@@ -381,6 +381,7 @@ input[type="search"] {
         width: 162px;
         min-width: 157px;
         max-width: 166px;
+        display: flex;
     }
     .filtre button:nth-child(5) {
         width: 200px;
@@ -1001,9 +1002,7 @@ footer a{
 .assistance a:nth-child(1) {
     font-size: larger;
     font-weight: bold;
-    color: #000;
-    text-decoration: none;
-    outline: 0;
+   
 }
 .propos,
 .hebergement,
