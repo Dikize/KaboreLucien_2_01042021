@@ -19,6 +19,7 @@ body {
     flex-direction: column;
 }
 .container a{
+    color: #000;
     text-decoration: none;
     outline: 0;
 }
@@ -245,7 +246,7 @@ input[type="search"] {
         position: relative;
         right: 30px;
         padding-right: 0;
-        width: 95%;
+        width: 100%;
     }
     .flexForm label {
         z-index: 100;
@@ -321,6 +322,12 @@ input[type="search"] {
     .filtre button:nth-child(5) {
         width: 25%;
     }  
+    .filtre button:nth-child(5) .img {
+        width: 52px;
+        height: 50px;
+        left: 8px;
+        clip-path: circle(48%);
+    }
 }
 @media (max-width: 834px) {
     .filtre {
@@ -351,8 +358,7 @@ input[type="search"] {
     .filtre button .img{
         width: 50px;
         height: 49px;
-        position: relative;
-        right: 4px;
+        left: -4px;
         clip-path: circle(50%);
     }
     .filtre button:nth-child(5) .img {
@@ -381,7 +387,7 @@ input[type="search"] {
         display: flex;
     }
     .filtre button .img {
-        left: 4px;
+        left: 2px;
         clip-path: circle(49%);
     }
     .filtre button:nth-child(5) .img {
@@ -444,11 +450,13 @@ article .card:nth-child(7) {
     grid-row: 3/4;
     grid-column: 3/4;
 }
-article p:nth-child(8) {
+article a {
+    font-size: large;
     margin: 20px;
     grid-column: 1/5;
     grid-row: 4/5;
 }
+
 article .card,
 aside .card {
     width: 80%;
@@ -620,15 +628,12 @@ aside figcaption {
 
 aside .card:nth-child(2) {
     grid-row: 2/3;
-  
 }
 aside .card:nth-child(3) {
     grid-row: 3/4;
-
 }
 aside .card:nth-child(4) {
     grid-row: 4/5;
-
 }
 
 aside .etoile{
@@ -953,19 +958,27 @@ footer {
     padding: 20px 0;
     display: grid;
     grid-template-rows: 158px;
-    grid-template-columns: 24% 24% 24% 24%;
-}
-footer h3{
-    margin: 10px 0;
+    grid-template-columns: 26% 28% 28% 11%;
 }
 
+footer a{
+    margin: 10px 0;
+
+}
+.propos a:nth-child(1),
+.hebergement a:nth-child(1),
+.assistance a:nth-child(1) {
+    font-size: larger;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    outline: 0;
+}
 .propos,
 .hebergement,
 .assistance {
-    line-height: 2rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     margin-left: auto;
 }
 
