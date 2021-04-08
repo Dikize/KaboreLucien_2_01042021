@@ -18,13 +18,15 @@ body {
     display: flex;
     flex-direction: column;
 }
-.container a{
-    color: #000;
+.container a {
     text-decoration: none;
     outline: 0;
 }
 .container .card {
     box-shadow: 4px 8px 16px rgba(0,0,0,0.3);
+}
+.container .card {
+    cursor: pointer;
 }
 @media (max-width: 1024px) {
     .container {
@@ -33,11 +35,10 @@ body {
 }
 @media (max-width: 540px) {
     .container {
-	margin: 0 0 30px;
+	    margin: 0 0 30px;
     }
     .container .card {
         width: 100%;
-        cursor: pointer;
     }
 }
 /*--************************* ( navbar) *************************--*/
@@ -137,9 +138,9 @@ input[type="search"] {
 }
 
 .flexForm label {
+    width: 92px;
     padding: 0;
     background-color: #F2F2F2;
-    width: 80px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     display: flex;
@@ -249,6 +250,7 @@ input[type="search"] {
         width: 100%;
     }
     .flexForm label {
+        width: 60px;
         z-index: 100;
     }
     .flexForm button {
@@ -300,7 +302,9 @@ input[type="search"] {
     justify-items: center;
 }
 .filtre button:nth-child(5) {
-    width: 20%;
+    width: 25%;
+    min-width: 227.7px;
+    max-width: 219.6px;
     grid-template-columns: 20% 80%;
 }
 .filtre .img {
@@ -314,21 +318,20 @@ input[type="search"] {
     justify-items: center;
     align-items: center;
 }
-
+  
+.filtre button:nth-child(5) .img {
+    width: 50px;
+    height: 49px;
+    clip-path: circle(50%);
+    left: 2px;
+}
 @media (max-width: 1024px) {
     .filtre button {
         width: 19%;
     }
-    .filtre button:nth-child(5) {
-        width: 25%;
-    }  
-    .filtre button:nth-child(5) .img {
-        width: 52px;
-        height: 50px;
-        left: 8px;
-        clip-path: circle(48%);
-    }
+   
 }
+
 @media (max-width: 834px) {
     .filtre {
         display: grid;
@@ -338,7 +341,6 @@ input[type="search"] {
     .filtre button {
         min-width: 227.7px;
         max-width: 219.6px;
-        display: flex;
     }
     .filtre button:nth-child(2) {
         grid-column: 1/2;
@@ -363,7 +365,7 @@ input[type="search"] {
         clip-path: circle(50%);
     }
     .filtre button:nth-child(5) .img {
-        left: 1px;
+        left: 0px;
     }
 }
 @media (max-width: 540px) {
@@ -400,7 +402,15 @@ input[type="search"] {
     .filtre button h3 {
         margin: auto;
     }
+    header p {
+        font-size: large;
+    }
 }
+@media (max-width: 346px) {
+    header {
+        padding: 0 2px;
+    }
+ }
 /*--************************* (main hébergement) *************************--*/
 main{   
     margin: 20px 0;
@@ -453,10 +463,15 @@ article .card:nth-child(7) {
     grid-column: 3/4;
 }
 article a {
-    font-size: large;
-    margin: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 0;
+    padding-left: 30px;
     grid-column: 1/5;
     grid-row: 4/5;
+}
+article a:visited {
+    color: #000;    
 }
 
 article .card,
@@ -563,7 +578,11 @@ article .img{
         border-top-right-radius: 20px;
     }
 }
-
+@media (max-width: 834px) {
+    article a {
+        padding-left: 10px;
+    }
+}
 /*--************************* ( aside populaire ) *************************--*/
 aside { 
     width: 30%;
@@ -755,6 +774,10 @@ aside .etoile{
         align-self: center;
         justify-self: center;
     }
+    aside .card:nth-child(4) {
+        
+        margin: 25px 0 35px;
+    }
 
     aside .img {
         height: 100%;
@@ -813,42 +836,42 @@ section .card:nth-child(7) {
     grid-column: 4/5;
 }
 
-section .card:nth-child(2) .img{
+section .card:nth-child(2) .img {
     background-color: #333;
     background-image: url('../images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg');
     background-size: cover;
     background-position: center;
     /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
 }
-section .card:nth-child(3) .img{
+section .card:nth-child(3) .img {
     background-color: #333;
-    background-image: url('../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
+    background-image: url('../images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg');
     background-size: cover;
     background-position: center;
     /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
 }
-section .card:nth-child(4) .img{
+section .card:nth-child(4) .img {
     background-color: #333;
     background-image: url('../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg');
     background-size: cover;
     background-position: center;
     /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
 }
-section .card:nth-child(5) .img{
+section .card:nth-child(5) .img {
     background-color: #333;
     background-image: url('../images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg');
     background-size: cover;
     background-position: center;
     /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
 }
-section .card:nth-child(6) .img{
+section .card:nth-child(6) .img {
     background-color: #333;
     background-image: url('../images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg');
     background-size: cover;
     background-position: center;
     /* background: no-repeat center / cover url('../images/activites/4_small/.jpg'); */
 }
-section .card:nth-child(7) .img{
+section .card:nth-child(7) .img {
     background-color: #333;
     background-image: url('../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg');
     background-size: cover;
@@ -871,8 +894,9 @@ section .card-100 .img{
 
 /*--------- text ---------*/
 section h3 {
-    margin-bottom: 13px;
+    margin-bottom: 20px;
     grid-column: 1/3;
+    font-size: x-large;
 }
 section .card figcaption {
 	margin: auto 0 auto 30px;
