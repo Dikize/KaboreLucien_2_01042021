@@ -111,7 +111,7 @@ header a p{
 
 /*--************************* ( form recherche) *************************--*/
 .flexForm {
-    width: 393px;
+    width: 485px;
     height: 38px;
     margin: 17px 0;
     display: flex;
@@ -139,11 +139,10 @@ input[type="search"] {
 }
 
 .flexForm label {
-    width: 92px;
+    width: 60px;
     padding: 0;
     background-color: #F2F2F2;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px 0 0 10px;
     display: flex;
 }
 .flexForm label img {
@@ -154,10 +153,9 @@ input[type="search"] {
 
 .flexForm button, .filtre button {
     background: #0065FC;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 0 10px 10px 0;
     color: #fff;
-    padding: 0 30px;
+    padding: 0 10px;
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
@@ -280,6 +278,7 @@ input[type="search"] {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+    font-weight: 600;
 }
 .filtre p {
     margin-right: 20px;
@@ -434,11 +433,11 @@ article h2{
 }
 main figcaption {
     margin: 10px 0 0 10px;
-    font-size: large;
+    font-size: medium;
     font-weight: bold;
 }
 main p {
-    font-size: medium;
+    font-size: smaller;
 }
 article .card:nth-child(2){
     grid-row: 2/3;
@@ -534,7 +533,7 @@ article .card:nth-child(7) .img {
 article .img{
     width: 100%;
     height: 100px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 .etoile, .card p{
     margin-left: 10px;
@@ -588,7 +587,7 @@ article .img{
 /*--************************* ( aside populaire ) *************************--*/
 aside { 
     width: 30%;
-    padding: 0 20px;  
+    padding: 0 15px;  
     background-color: #F2F2F2;
     border-radius: 13px;
     display: grid;
@@ -643,7 +642,7 @@ aside .img{
     grid-column: 1/2;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
 }
 aside figcaption {
     grid-column: 2/3;
@@ -704,6 +703,7 @@ aside .etoile{
     }
     aside .img{
         height: 148px;
+        border-radius: 16px 16px 0 0;
     }
     aside .etoile {
         align-self: flex-start;
@@ -790,6 +790,29 @@ aside .etoile{
     aside .etoile {
         align-self: flex-end;
     }
+}
+@media (min-width: 1025px) {
+    article {
+        padding: 0 10px;
+    }
+
+    article .card {
+        width: 93%;
+        min-width: 195.5px;
+        max-width: 267px;
+        height: 200px;
+    }
+    article .card .img {
+        height: 120px;
+    }
+
+    aside {
+    }
+    aside .card {
+        padding: 4px 0 0 4px;
+        min-width: 278.5px;
+    }
+
 }
 /*--************************* ( section activité ) *************************--*/
 section { 
