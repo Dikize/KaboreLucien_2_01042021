@@ -14,7 +14,7 @@ body {
 
 /*--************************* ( container principale ) *************************--*/
 .container{
-    margin: 0 30px 30px;
+    margin: 0 25px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +35,7 @@ body {
 }
 @media (max-width: 540px) {
     .container {
-	    margin: 0 0 30px;
+        margin: 0 0 30px;
     }
     .container .card {
         width: 100%;
@@ -86,9 +86,9 @@ nav {
 nav .item-nav:focus {
     border-top: 1px solid #0065FC;
 }
-/* nav .item-nav:focus-visible {
+nav .item-nav:visited {
     border-top: 1px solid #0065FC;
-} */
+}
 
 /*--************************* (header) *************************--*/
 header {
@@ -213,8 +213,11 @@ input[type="search"] {
     }
     
     .item-nav {
-        font-size: 1.5rem;
+        font-size: large;
         align-items: center;
+    }
+    nav .liste-nav li:nth-child(1) .item-nav{
+        margin-left: 10px;
     }
     nav .liste-nav li:nth-child(2) .item-nav{
         padding-left: 15px;
@@ -224,11 +227,7 @@ input[type="search"] {
         width: 100%;
         margin: 0;
     }
-    nav .liste-nav li:nth-child(2) .item-nav:active ,
-    nav .liste-nav li:nth-child(2) .item-nav:active {
-        border-bottom: 1px solid #0065FC;
-        border-top: 0;
-    }
+
     nav .liste-nav li:nth-child(2) .item-nav:focus ,
     nav .liste-nav li:nth-child(3) .item-nav:focus {
         border-bottom: 1px solid #0065FC;
@@ -311,9 +310,11 @@ input[type="search"] {
     background-color: #81a8e24d;
     height: 50px;
     width: 130%;
-    clip-path: circle(50%);
+    transform: translate(1px, -1px);
+    clip-path: circle(51%);
+    border-radius: 50%;
     position: relative;
-    left: 4px;
+    left: 5px;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -322,8 +323,7 @@ input[type="search"] {
 .filtre button:nth-child(5) .img {
     width: 50px;
     height: 49px;
-    clip-path: circle(50%);
-    left: 2px;
+    left: 1px;
 }
 @media (max-width: 1024px) {
     .filtre button {
@@ -361,11 +361,7 @@ input[type="search"] {
     .filtre button .img{
         width: 50px;
         height: 49px;
-        left: -4px;
-        clip-path: circle(50%);
-    }
-    .filtre button:nth-child(5) .img {
-        left: 0px;
+        left: -5px;
     }
 }
 @media (max-width: 540px) {
@@ -390,15 +386,13 @@ input[type="search"] {
         grid-row: 4/5;
     }
     .filtre button .img {
-        left: -1px;
-        bottom: 0.5px;
-        clip-path: circle(50%);
+        left: -2px;
+        height: 50px;
+        bottom: -1.5px;
     }
     .filtre button:nth-child(5) .img {
-        width: 50px;
-        height: 49px;
-        left: 0px;
-        clip-path: circle(51%);
+        left: -1px;
+        
     }
     .filtre button h3 {
         margin: auto;
@@ -806,8 +800,8 @@ aside .etoile{
         height: 120px;
     }
 
-    aside {
-    }
+    /* aside {
+    } */
     aside .card {
         padding: 4px 0 0 4px;
         min-width: 278.5px;
