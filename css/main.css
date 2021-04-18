@@ -20,7 +20,7 @@ article {
     gap: 3px;
 }
 article h2{
-    margin: 30px 10px 0;
+    margin: 30px 0 0;
     grid-column: 1/5;
     justify-self: center; 
 }

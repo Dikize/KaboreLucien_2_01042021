@@ -5,7 +5,8 @@ header {
 header h2 {
 	font-weight: bold;
     font-size: larger;
-    line-height: 25px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
 header a {
     display: flex;
@@ -266,14 +267,15 @@ input[type="search"] {
     grid-template-columns: 20% 80%;
 }
 .filtre .img {
-    background-color: #81a8e24d;
     height: 50px;
     width: 130%;
+    background-color: #81a8e24d;
+    color: #0065FC;
     transform: translate(1px, -1px);
     clip-path: circle(51%);
     border-radius: 50%;
     position: relative;
-    left: 5px;
+    left: 4.5px;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -281,8 +283,9 @@ input[type="search"] {
 
 .filtre button:nth-child(5) .img {
     width: 50px;
-    height: 49px;
-    left: 1px;
+    height: 50px;
+    left: 0px;
+    bottom: 0.5px;
 }
 @media (max-width: 1024px) {
     .filtre button {
@@ -337,8 +340,7 @@ input[type="search"] {
         display: flex;
     }
     .filtre button:nth-child(5) {
-        width: 200px;
-        min-width: 195.5px;
+        min-width: 214px;
         max-width: 288px;
         grid-column: 1/2;
         grid-row: 4/5;
@@ -346,17 +348,19 @@ input[type="search"] {
     .filtre button .img {
         left: -2px;
         height: 50px;
-        bottom: -1.5px;
+        clip-path: circle(49%);
     }
     .filtre button:nth-child(5) .img {
-        left: -1px;
-        
+        left: -2px;
     }
     .filtre button span:nth-child(2) {
         margin: auto;
     }
     header p {
         font-size: large;
+    }
+    header a img {
+        align-self: baseline;
     }
 }
 @media (max-width: 346px) {
