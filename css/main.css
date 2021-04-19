@@ -50,10 +50,9 @@ article .card:nth-child(7) {
     grid-column: 3/4;
 }
 article a {
-    font-size: larger;
+    font-size: medium;
     font-weight: bolder;
     margin: 0;
-    padding-left: 30px;
     grid-column: 1/5;
     grid-row: 4/5;
 }
@@ -63,7 +62,7 @@ article a:visited {
 
 article .card,
 aside .card {
-    width: 80%;
+    width: 79%;
     height: 85%;
     margin: 20px 0;
     padding: 4px;
@@ -129,7 +128,9 @@ article .img{
 	margin-top: auto;
     padding-bottom: inherit;
 }
-
+.etoile img {
+    margin: 1px;
+}
 
 @media (max-width: 1024px) {
     main {
@@ -173,7 +174,7 @@ article .img{
 
 /*--************************* ( aside populaire ) *************************--*/
 aside { 
-    width: 30%;
+    width: 31%;
     padding: 0 15px;  
     background-color: #F2F2F2;
     border-radius: 13px;
@@ -250,16 +251,11 @@ aside .etoile{
 }
 @media (max-width: 1072px) {
     aside .card:nth-child(3) {
-    grid-template-rows: 73px 28.5px 29.5px;
-    column-gap: 8px;
+        grid-template-rows: 73px 28.5px 29.5px;
+        column-gap: 8px;
+    }
 }
-    /* aside .card:nth-child(3) p {
-        align-self: flex-end;
-    } */
-}
-/* @media (max-width: 1135px) {
 
-} */
 @media (max-width: 1024px) {
     aside {
         width: 100%;
@@ -392,12 +388,8 @@ aside .etoile{
     article .card .img {
         height: 120px;
     }
-
-    /* aside {
-    } */
     aside .card {
         padding: 4px 0 0 4px;
         min-width: 278.5px;
     }
-
 }
