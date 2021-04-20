@@ -118,12 +118,6 @@ aside .card {
     margin: 1px;
 }
 
-@media (max-width: 834px) {
-    #hebergement a {
-        padding-left: 10px;
-    }
-}
-
 /*---------------- (populaire) ----------------*/
 aside { 
     width: 31%;
@@ -224,6 +218,10 @@ aside .etoile{
     }
 
     /* hebergement */
+    #hebergement a, #hebergement h2 {
+        padding-left: 20px;
+    }
+
     #hebergement {
         width: 100%;
         height: 648px;
