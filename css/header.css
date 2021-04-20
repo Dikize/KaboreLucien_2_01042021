@@ -264,7 +264,7 @@ input[type="search"] {
     justify-items: center;
 }
 .filtre button:hover {
-    background: #81a8e24d;
+    background: #DEEBFF;
     box-shadow: 0 0 12px #0065FC;
     
 }
@@ -277,7 +277,7 @@ input[type="search"] {
 .filtre .img {
     height: 50px;
     width: 130%;
-    background-color: #81a8e24d;
+    background-color: #DEEBFF;
     color: #0065FC;
     transform: translate(1px, -1px);
     clip-path: circle(51%);
