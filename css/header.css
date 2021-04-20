@@ -34,9 +34,6 @@ nav {
     align-items: flex-end;
     list-style-type: none;
 }
-.logo-menu {
-	align-self: center;
-}
 .liste-nav li:nth-child(1) {
     margin-right: auto;
 }
@@ -47,6 +44,10 @@ nav {
     display: flex;
     align-items: center;
     margin: 0 20px;
+}
+.logo-menu {
+	align-self: center;
+    margin-left: 0;
 }
 nav .liste-nav li:nth-child(2) .item-nav,
 nav .liste-nav li:nth-child(3) .item-nav {
@@ -180,7 +181,7 @@ input[type="search"] {
     }
     nav .liste-nav li:nth-child(2) .item-nav,
     nav .liste-nav li:nth-child(3) .item-nav {
-        width: 100%;
+        width: 90%;
     }
 
     nav .liste-nav li:nth-child(2):focus,
