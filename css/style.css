@@ -23,6 +23,7 @@ body {
     outline: 0;
 }
 .container .card {
+    word-wrap: break-word;
     box-shadow: 4px 8px 16px rgba(0,0,0,0.3);
 }
 .container .card {
