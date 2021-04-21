@@ -1,3 +1,7 @@
+:root {
+    --bg-gray: #F2F2F2;
+}
+
 main{   
     margin: 20px 0;
     display: flex;
@@ -15,7 +19,7 @@ main p {
 /*---------------- (hebergement) ----------------*/
 #hebergement {   
     width: 68%;
-    background-color: #F2F2F2;
+    background-color: var(--bg-gray);
     border-radius: 13px;
     padding: 0 20px;
     display: grid;
@@ -125,7 +129,7 @@ aside .card {
 aside { 
     width: 31%;
     padding: 0 20px;  
-    background-color: #F2F2F2;
+    background-color: var(--bg-gray);
     border-radius: 13px;
     display: flex;
     flex-direction: column;

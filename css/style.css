@@ -1,3 +1,8 @@
+:root {
+    --bg-gray: #F2F2F2;
+    --bg-blue: #0065FC;
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -45,7 +50,7 @@ body {
 
 /*--************************* (Footer) *************************--*/
 footer {
-    background-color: #F2F2F2;
+    background-color: var(--bg-gray);
     padding: 20px 0;
     display: grid;
     grid-template-rows: 158px;
