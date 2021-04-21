@@ -313,9 +313,9 @@ aside .etoile{
     aside {
         width: 36%; height: 902px;
         padding: 0;
-        display: flex;
+        display: flex; row-gap: 27px;
     }
-    aside .card {align-self: center;}
+    aside .card {height: 232.6px; align-self: center;}
 
     .fa-chart-line {display: none;}
 

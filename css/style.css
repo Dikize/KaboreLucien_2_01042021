@@ -79,7 +79,7 @@ footer a{
     margin-left: auto;
 }
 
-@media (max-width: 762px) {
+@media (max-width: 768px) {
     footer {
         grid-template-columns: 33.33% 33.3% 33.3%;
         padding-left: 14px;
