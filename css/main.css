@@ -1,6 +1,7 @@
 main{   
     margin: 20px 0;
     display: flex;
+    column-gap: 20px;
 }
 main h3 {
     margin: 10px 0 0 10px;
@@ -13,20 +14,26 @@ main p {
 
 /*---------------- (hebergement) ----------------*/
 #hebergement {   
-    width: 67%;
+    width: 68%;
     background-color: #F2F2F2;
     border-radius: 13px;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 31.5% 31.5% 31.5%;
-    grid-template-rows: 10% 40% 40% 8%;
-    gap: 3px;
-    grid-column-gap: 20px;
+    grid-template-columns: 31.3% 31.3% 31.3%;
+    grid-template-rows: 70px 240px 240px 50px;
+    grid-column-gap: 3%;
 }
-#hebergement h2{
-    margin: 30px 0 0;
-    grid-column: 1/5;
-    justify-self: flex-start; 
+
+#hebergement .card,
+aside .card {
+    width: 100%; height: 200px;
+    margin: 20px 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 13px;
+    align-self: center; justify-self: center;
 }
 
 #hebergement .card:nth-child(2){
@@ -53,30 +60,14 @@ main p {
     grid-row: 3/4;
     grid-column: 3/4;
 }
-#hebergement a {
-    font-size: medium;
-    font-weight: bolder;
-    margin: 0;
-    grid-column: 1/5;
-    grid-row: 4/5;
-}
-#hebergement a:visited {
-    color: #000;    
+
+/* (img hebergement) */
+#hebergement .img{
+    width: 100%;
+    height: 120px;
+    border-radius: 10px 10px 0 0;
 }
 
-#hebergement .card,
-aside .card {
-    width: 100%;
-    height: 85%;
-    margin: 20px 0;
-    padding: 4px;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 13px;
-    align-self: center;
-    justify-self: center;
-}
 #hebergement .card:nth-child(2) .img {
     background-color: #333;
     background: no-repeat center / cover url('../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
@@ -101,14 +92,26 @@ aside .card {
     background-color: #333;
     background: no-repeat center / cover url('../images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
-#hebergement .img{
-    width: 100%;
-    height: 100px;
-    border-radius: 10px 10px 0 0;
+
+/* (text) (lien) (étoile) */
+#hebergement h2{
+    margin: 30px 0 0;
+    grid-column: 1/5; justify-self: flex-start; 
+}
+
+#hebergement a {
+    font-weight: bolder;
+    margin: 0;
+    grid-column: 1/5; grid-row: 4/5;
+}
+
+#hebergement a:visited {
+    color: #000;    
 }
 .etoile, .card p{
     margin-left: 10px;
 }
+
 .etoile {
 	display: flex;
 	margin-top: auto;
@@ -121,14 +124,11 @@ aside .card {
 /*---------------- (populaire) ----------------*/
 aside { 
     width: 31%;
-    padding: 0 15px;  
+    padding: 0 20px;  
     background-color: #F2F2F2;
     border-radius: 13px;
-    display: grid;
-    margin-left: 20px;
-    grid-template-rows: 10% 26.6% 26.6% 26.6%;
-    grid-template-columns: 100%;
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 aside .card{
     width: 100%;
@@ -137,11 +137,11 @@ aside .card{
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 52px 37.5px 42px;
-    align-self: center;
-    justify-self: center;
+    align-self: center; justify-self: center;
     column-gap: 8px;
 }
 .titleAside {
+    margin: 30px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -188,74 +188,18 @@ aside .etoile{
 }
 
 /*---------------- (responsive) ----------------*/
-@media (max-width: 1072px) {
-    aside .card:nth-child(3) {
-        grid-template-rows: 73px 28.5px 29.5px;
-        column-gap: 8px;
-    }
-}
-@media (min-width: 1025px) {
-    #hebergement .card {
-        width: 100%;
-        min-width: 195.5px;
-        max-width: 267px;
-        height: 200px;
-    }
-    #hebergement .card .img {
-        height: 120px;
-    }
-    aside .card {
-        padding: 4px 0 0 4px;
-        min-width: 278.5px;
-    }
-}
-
 @media (max-width: 1024px) {
     main {
         padding: 20px 0;
-        display: flex;
+        display: flex; row-gap: 20px;
         flex-direction: column-reverse;
     }
 
-    /* hebergement */
-    #hebergement a, #hebergement h2 {
-        padding-left: 20px;
-    }
-
-    #hebergement {
-        width: 100%;
-        height: 648px;
-        padding: 0 15px;
-        grid-template-rows: 68px 265px 256px 50px;
-        gap: 0;
-        justify-content: space-between;
-    }
-    #hebergement .card, aside .card {
-        height: 232.6px;
-        border-radius: 20px;
-    }
-    #hebergement .card {
-        width: 90%;
-    }
-    #hebergement h4 {
-        margin: 5px 0 5px 10px;
-        font-weight: bold;
-    }
-    .etoile {
-        margin-top: auto;
-    }
-    #hebergement .card .img {
-        height: 140px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    /* populaire */
+     /* populaire */
     aside {
-        width: 100%;
-        height: 360px;
+        width: 100%; height: 360px;
         margin-left: 0;
-        margin-bottom: 20px;
+        display: grid;
         grid-template-columns: 33.3% 33.3% 33.3%;
         grid-template-rows: 68px 265px;
         row-gap: 21px;
@@ -280,7 +224,7 @@ aside .etoile{
     }
     aside .img{
         height: 148px;
-        border-radius: 16px 16px 0 0;
+        border-radius: 15px 15px 0 0;
     }
     aside .etoile {
         align-self: flex-start;
@@ -301,23 +245,51 @@ aside .etoile{
         grid-row: 2/3;
         grid-column: 3/4;
     }
-}
 
-@media (max-width: 762px) {
-    main {
-        gap: 10px;
-    }
-    #hebergement,
-    aside {
-        width: 100%;
-        align-self: center;
-        margin: 0;
-    }
     /* hebergement */
     #hebergement {
-        height: 900px;
+        width: 100%;
+        height: 648px;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: 68px 265px 265px 50px;
+        gap: 0;
+    }
+    #hebergement .card, aside .card {
+        height: 232.6px;
+        border-radius: 15px;
+    }
+    #hebergement .card {
+        width: 90%;
+    }
+    #hebergement .card .img {
+        height: 140px;
+        border-radius: 15px 15px 0 0;
+    } 
+    /* (text) (lien) (étoile) */
+    #hebergement h4 {
+        margin: 5px 0 5px 10px;
+        font-weight: bold;
+    }
+    #hebergement h2 {margin: 30px 0 0 14px;}
+    
+    #hebergement a {margin-left: 14px;}
+    
+    .etoile {margin-top: auto;}
+    
+}
+
+@media (max-width: 768px) {
+    main {
+        height: 940px;
+        flex-direction: row;
+        gap: 10px;
+    }
+    #hebergement {
+        width: 68%; height: 902px;
+        padding: 0;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 68px 265px 256px 256px 50px;
+        grid-template-rows: 70px 240px 240px 240px 50px;
+        row-gap: 15px;
     }
     #hebergement .card:nth-child(4) {
         grid-row: 4/5;
@@ -328,33 +300,46 @@ aside .etoile{
         grid-column: 2/3;
     }
     #hebergement a {
+        grid-column: 1/4;
         grid-row: 5/6;
-        grid-column: 1/2;
-        margin-top: 10px;
     }
-    
+    #hebergement h2, #hebergement a {justify-self: center;}
+
     /* populaire */
     aside {
-        height: 360px;
-        padding: 10px 0;
+        width: 36%; height: 902px;
+        padding: 0;
+        display: flex;
     }
+    aside .card {align-self: center;}
+
+    .fa-chart-line {display: none;}
+
+    .titleAside h2 {margin-right: 0;}
 }
 @media (max-width: 540px) {
     main {
+        height: auto;
         flex-direction: column-reverse;
     }
 
     #hebergement {
+        width: 100%;
+        height: auto;
         background-color: white;
         display: flex;
         flex-direction: column;
-        height: 1685px;
         padding: 0 15px;
     }
-
+    #hebergement .card {
+        width: 100%;
+    }
+    #hebergement a {
+        margin-left: 0;
+    }
     aside {
-        height: 730px;
-        padding: 25px 15px 0;
+        width: 100%; height: auto;
+        padding: 25px 15px;
         border-radius: 0;
         display: flex;
         flex-direction: column;
@@ -363,12 +348,9 @@ aside .etoile{
     .titleAside {
         justify-content: space-between;
     }
-    aside .card:nth-child(2),
-    aside .card:nth-child(3),
-    aside .card:nth-child(4) {
+    aside .card {
         width: 100%;
         height: 190px;
-        margin: 25px 0;
         padding-bottom: 0px;
         border-radius: 30px;
         display: grid;
@@ -376,12 +358,6 @@ aside .etoile{
         grid-template-rows: 32.3% 32.3% 32.3%;
         align-self: center;
         justify-self: center;
-    }
-    aside .card:nth-child(3) {
-        margin: 0;
-    }
-    aside .card:nth-child(4) {
-        margin-bottom: 0;
     }
 
     aside .img {
