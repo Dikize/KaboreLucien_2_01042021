@@ -158,28 +158,15 @@
         flex-direction: column;
         padding: 0 15px;
     }
-    #activite .card:nth-child(2),
-    #activite .card:nth-child(3),
-    #activite .card:nth-child(4),
-    #activite .card:nth-child(5),
-    #activite .card:nth-child(6),
-    #activite .card:nth-child(7){
+    #activite .card{
         height: 237px;
         border-radius: 30px;
         align-self: center;
     }
-    #activite .card:nth-child(3),
-    #activite .card:nth-child(4),
-    #activite .card:nth-child(5),
-    #activite .card:nth-child(6) {
-        margin: 25px 0;
+    #activite .card{
+        margin: 15px 0;
     }
-    #activite .card:nth-child(2){
-        margin-bottom: 25px;
-    }
-    #activite .card:nth-child(7){
-        margin-top: 25px;
-    }
+
     #activite .card .img {
         height: 80%;
         border-top-left-radius: 30px;

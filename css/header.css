@@ -309,6 +309,7 @@ input[type="search"] {
         grid-gap: 10px;
     }
     .filtre button {
+        display: flex;
         min-width: 227.7px;
         max-width: 219.6px;
     }
