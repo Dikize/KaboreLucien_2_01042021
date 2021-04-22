@@ -160,16 +160,20 @@
 }
 @media (max-width: 540px) {
     #activite {
+        margin-bottom: 0;
+        padding: 0 15px;
         display: flex;
         flex-direction: column;
-        padding: 0 15px;
     }
-    #activite .card{
+    #activite .card:nth-child(2),
+    #activite .card:nth-child(3),
+    #activite .card:nth-child(4),
+    #activite .card:nth-child(5),
+    #activite .card:nth-child(6),
+    #activite .card:nth-child(7) {
         height: 237px;
         border-radius: 30px;
         align-self: center;
-    }
-    #activite .card{
         margin: 15px 0;
     }
 
