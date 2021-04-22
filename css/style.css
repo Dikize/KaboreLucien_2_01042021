@@ -1,6 +1,6 @@
 :root {
-    --bg-gray: #F2F2F2;
-    --bg-blue: #0065FC;
+    --main-bg-gray: #F2F2F2;
+    --main-bg-blue: #0065FC;
 }
 
 *, ::before, ::after {
@@ -28,7 +28,6 @@ body {
     outline: 0;
 }
 .container .card {
-    word-wrap: break-all;
     box-shadow: 0 0 16px rgba(0,0,0,0.3);
 }
 .container .card {
@@ -50,7 +49,7 @@ body {
 
 /*--************************* (Footer) *************************--*/
 footer {
-    background-color: var(--bg-gray);
+    background-color: var(--main-bg-gray);
     padding: 20px 0;
     display: grid;
     grid-template-rows: auto;
