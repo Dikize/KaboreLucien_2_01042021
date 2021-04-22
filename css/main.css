@@ -29,7 +29,7 @@ main p {
 }
 
 #hebergement .card,
-aside .card {
+#populaire .card {
     width: 100%; height: 200px;
     margin: 20px 0;
     padding: 4px;
@@ -106,12 +106,13 @@ aside .card {
 #hebergement a {
     font-weight: bolder;
     margin: 0;
-    grid-column: 1/5; grid-row: 4/5;
+    grid-column: 1/2; grid-row: 4/5;
 }
 
 #hebergement a:visited {
     color: #000;    
 }
+/*---------------- (populaire) ----------------*/
 .etoile, .card p{
     margin-left: 10px;
 }
@@ -126,7 +127,7 @@ aside .card {
 }
 
 /*---------------- (populaire) ----------------*/
-aside { 
+#populaire { 
     width: 31%;
     padding: 0 20px;  
     background-color: var(--bg-gray);
@@ -134,7 +135,7 @@ aside {
     display: flex;
     flex-direction: column;
 }
-aside .card{
+#populaire .card{
     width: 100%;
     height: 140px;
     padding-bottom: 0px;
@@ -153,41 +154,41 @@ aside .card{
 .fa, .far, .fas {
 	font-size: 25px;
 }
-aside .card:nth-child(2) .img {
+#populaire .card:nth-child(2) .img {
     background-color: #333;
     background: no-repeat center / cover url('../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
 }
-aside .card:nth-child(3) .img {
+#populaire .card:nth-child(3) .img {
     background-color: #333;
     background: no-repeat center / cover url('../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
 }
-aside .card:nth-child(4) .img {
+#populaire .card:nth-child(4) .img {
     background-color: #333;
     background: no-repeat center / cover url('../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
 }
     
-aside .img{
+#populaire .img{
     grid-row: 1/4;
     grid-column: 1/2;
     width: 100%;
     height: 100%;
     border-radius: 10px 0 0 10px;
 }
-aside h3 {
+#populaire h3 {
     grid-column: 2/3;
 }
 
-aside .card:nth-child(2) {
+#populaire .card:nth-child(2) {
     grid-row: 2/3;
 }
-aside .card:nth-child(3) {
+#populaire .card:nth-child(3) {
     grid-row: 3/4;
 }
-aside .card:nth-child(4) {
+#populaire .card:nth-child(4) {
     grid-row: 4/5;
 }
 
-aside .etoile{
+#populaire .etoile{
     align-self: flex-end;
 }
 
@@ -200,7 +201,7 @@ aside .etoile{
     }
 
      /* populaire */
-    aside {
+    #populaire {
         width: 100%; height: 360px;
         margin-left: 0;
         display: grid;
@@ -216,36 +217,36 @@ aside .etoile{
     .titleAside h2 {
         margin-right: 25px;
     }
-    aside .card:nth-child(3) p {
+    #populaire .card:nth-child(3) p {
         margin-top: 10px;
     }
-    aside .card {
+    #populaire .card {
         height: 100%;
         margin: 0;
         display: flex;
         flex-direction: column;
         align-self: flex-start;
     }
-    aside .img{
+    #populaire .img{
         height: 148px;
         border-radius: 15px 15px 0 0;
     }
-    aside .etoile {
+    #populaire .etoile {
         align-self: flex-start;
         display: flex;
         margin-top: auto;
         padding-bottom: 10px;
     }
     
-    aside .card {
+    #populaire .card {
         height: 232.6px;
         width: 90%;
     }
-    aside .card:nth-child(3) {
+    #populaire .card:nth-child(3) {
         grid-row: 2/3;
         grid-column: 2/3;
     }
-    aside .card:nth-child(4) {
+    #populaire .card:nth-child(4) {
         grid-row: 2/3;
         grid-column: 3/4;
     }
@@ -258,7 +259,8 @@ aside .etoile{
         grid-template-rows: 68px 265px 265px 50px;
         gap: 0;
     }
-    #hebergement .card, aside .card {
+    #hebergement .card, 
+    #populaire .card {
         height: 232.6px;
         border-radius: 15px;
     }
@@ -310,15 +312,16 @@ aside .etoile{
     #hebergement h2, #hebergement a {justify-self: center;}
 
     /* populaire */
-    aside {
+    #populaire {
         width: 36%; height: 902px;
         padding: 0;
         display: flex; row-gap: 27px;
     }
-    aside .card {height: 232.6px; align-self: center;}
+    #populaire .card {height: 232.6px; align-self: center;}
 
     .fa-chart-line {display: none;}
 
+    .titleAside {justify-content: center;}
     .titleAside h2 {margin-right: 0;}
 }
 @media (max-width: 540px) {
@@ -346,7 +349,7 @@ aside .etoile{
     #hebergement a {
         margin: 15px 0 0;
     }
-    aside {
+    #populaire {
         width: 100%; height: auto;
         padding: 0 15px 35px;
         border-radius: 0;
@@ -354,7 +357,7 @@ aside .etoile{
         flex-direction: column;
         gap: 30px;
     }
-    aside .card {
+    #populaire .card {
         width: 100%;
         height: 190px;
         padding-bottom: 0px;
@@ -365,10 +368,10 @@ aside .etoile{
         align-self: center;
         justify-self: center;
     }
-    aside .card {
+    #populaire .card {
         margin: 10px 0;
     }
-    aside .img {
+    #populaire .img {
         height: 100%;
         border-radius: 0;
         border-top-left-radius: 25px;
@@ -380,7 +383,7 @@ aside .etoile{
     }
     .fa-chart-line {display: block;}
     
-    aside .etoile {
+    #populaire .etoile {
         align-self: flex-end;
     }
 }

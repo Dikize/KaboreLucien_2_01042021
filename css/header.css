@@ -8,7 +8,7 @@
 header {
     margin-bottom: 23px;
 }
-header h2 {
+header h1 {
 	font-weight: bold;
     font-size: larger;
     line-height: 20px;
@@ -198,7 +198,7 @@ input[type="search"] {
         border-top: 0;
     }
     
-    header h2, header h2 + p, header a {
+    header h1, header h1 + p, header a {
         padding: 0 15px;
     }
 

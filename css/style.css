@@ -28,8 +28,8 @@ body {
     outline: 0;
 }
 .container .card {
-    word-wrap: break-word;
-    box-shadow: 4px 8px 16px rgba(0,0,0,0.3);
+    word-wrap: break-all;
+    box-shadow: 0 0 16px rgba(0,0,0,0.3);
 }
 .container .card {
     cursor: pointer;
@@ -53,8 +53,8 @@ footer {
     background-color: var(--bg-gray);
     padding: 20px 0;
     display: grid;
-    grid-template-rows: 158px;
-    grid-template-columns: 26% 28% 28% 11%;
+    grid-template-rows: auto;
+    grid-template-columns: 28% 28% 28% auto;
 }
 
 footer a{
@@ -78,7 +78,11 @@ footer a{
     flex-direction: column;
     margin-left: auto;
 }
-
+@media (max-width: 900px) {
+    footer {
+        padding-left: 26px;
+    }
+}
 @media (max-width: 768px) {
     footer {
         grid-template-columns: 33.33% 33.3% 33.3%;
