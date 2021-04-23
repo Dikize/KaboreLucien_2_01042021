@@ -29,9 +29,11 @@ body {
 }
 .container .card {
     box-shadow: 0 0 16px rgba(0,0,0,0.3);
-}
-.container .card {
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.container .card:hover {
+    transform: translateY(-5px)
 }
 @media (max-width: 1024px) {
     .container {

@@ -104,6 +104,7 @@ main p {
 }
 
 #hebergement a {
+    color: #000;
     font-weight: bolder;
     margin: 0;
     grid-column: 1/2; grid-row: 4/5;
